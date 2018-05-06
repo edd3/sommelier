@@ -1,0 +1,47 @@
+/* Show it is fixed to the top */
+body {
+    padding-top: 4.5rem;
+}
+.home-index img{
+    max-width: 150px;
+}
+.home-index .img-holder{
+    padding: 50px;
+}
+.img-index .img-row:nth-child(2n){
+    background-color: #ddd;
+}
+.img-index .img-row{
+    padding: 20px;
+    max-height: 240px;
+}
+
+.img-index img{
+    max-height: 200px;
+}
+
+.pagination{
+    text-align: center;
+}
+.pagination *{
+    padding: 5px;
+}
+.img-view-holder img{
+    width: 100%;
+}
+.img-view-holder .lead{
+    margin-top: 45px;
+}
+.comment-row:nth-child(2n){
+    background-color: rgba(0,0,0,.05);
+}
+.comment-row:nth-child(2n+1){
+    background-color: rgba(0,0,0,.1);
+}
+.comment-row{
+    padding: 15px;
+}
+.img-view-comments-holder form{
+    margin: 50px;
+    width: 100%;
+}
