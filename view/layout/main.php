@@ -1,5 +1,4 @@
 <?php
-var_dump($_SESSION);
 
 use sommelier\base\App;
 use sommelier\helper\Html;
