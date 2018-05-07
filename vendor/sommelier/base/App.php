@@ -51,7 +51,7 @@ class App
         } catch (\Exception $e) {//@TODO ADD RESPONSE CODES HERE
             echo $e->getCode(); //@TODO RENDER ERROR PAGE
             echo '<br>';
-            if (DEBUG || !(strpos($e->getMessage(), 'MySql error!') === false)) {//hide mysql error if not debugging and show a simple error
+            if (DEBUG || !(strpos($e->getMessage(), 'MySql error!') !== false)) {//hide mysql error if not debugging and show a simple error
                 echo $e->getMessage();
             } else {
                 echo 'Database error!';

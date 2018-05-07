@@ -1,35 +1,42 @@
 <?php
+var_dump($_SESSION);
 
 use sommelier\base\App;
 use sommelier\helper\Html;
 
-$menuArr = [
-    [
-        'title' => 'home',
-        'link' => '/'
-    ],
-    [
-        'title' => 'images',
-        'link' => '/image'
-    ],
-    [
-        'title' => 'users',
-        'link' => '/user'
-    ],
-    [
-        'title' => 'contact',
-        'link' => '/contact'
-    ]
+$menuArr [] = [
+    'title' => 'home',
+    'link' => '/'
 ];
+
+$menuArr[] = [
+    'title' => 'images',
+    'link' => '/image'
+];
+
+if (App::$identity->isLogged()) {
+    $menuArr [] = [
+        'title' => 'Upload image',
+        'link' => '/image/upload'
+    ];
+}
+
+$menuArr [] = [
+    'title' => 'users',
+    'link' => '/user'
+];
+
+$menuArr[] = [
+    'title' => 'contact',
+    'link' => '/contact'
+];
+
 if (App::$identity->isLogged()) {
     $menuArr[] = [
         'title' => 'logout',
         'link' => '#',
         'onclick' => 'logout()'
     ];
-}
-if (App::$identity->asAdmin()) {
-    unset($menuArr[3]);
 }
 
 ?>

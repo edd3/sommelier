@@ -19,6 +19,9 @@ class ImageController extends Controller
         $maxImages = (new Image())->select()->filter('active')->count();
         $perpage = 10;
         $maxPages = ceil($maxImages / $perpage);
+        if (!$maxPages) {
+            $maxPages = 1;
+        }
         $page = App::$router->request->segment(2);
         if ($page === null) {
             $page = 1;

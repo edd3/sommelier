@@ -8,15 +8,6 @@ $this->title = 'Images';
 
 ?>
 <h1><?= $this->title ?></h1>
-<?php
-if (App::$identity->isLogged()) {
-
-    ?>
-    <a href="/image/upload" class="btn btn-info" role="button">Upload image</a>
-    <?php
-}
-
-?>
 <div class='img-index'>
     <?php
     foreach ($images as $k => $image) {
